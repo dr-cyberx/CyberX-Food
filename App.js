@@ -9,7 +9,7 @@ import SearchScreen from './src/screen/SearchScreen';
 
 const Stack = createStackNavigator();
 
-function App() {
+function App() { 
   return (
     <NavigationContainer>
       <Stack.Navigator>
