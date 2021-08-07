@@ -5,6 +5,8 @@ export default () => {
   const [result, setResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
+  console.log(result);
+
   useEffect(() => {
     searchApi("pasta");
   }, []);
@@ -22,7 +24,7 @@ export default () => {
       console.log("hello");
     } catch (err) {
       setErrorMessage("Oops! Something went wrong");
-      console.log('bye')
+      console.log("bye");
     }
   };
 
