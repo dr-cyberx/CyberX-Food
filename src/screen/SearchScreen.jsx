@@ -14,19 +14,21 @@ const SearchScreen = () => {
 
   return (
     <View style={style.SearchScreen}>
-      <SearchBar
-        term={term}
-        onTermChange={(newTerm) => setTerm(newTerm)}
-        handleEndEditing={() => {
-          searchApi(term);
-        }}
-      />
-      <Text>We found {result.length} results</Text>
-      {errorMessage ? <Text>{errorMessage}</Text> : null}
+      <View >
+        <SearchBar
+          term={term}
+          onTermChange={(newTerm) => setTerm(newTerm)}
+          handleEndEditing={() => {
+            searchApi(term);
+          }}
+        />
+        <Text>We found {result.length} results</Text>
+        {errorMessage ? <Text>{errorMessage}</Text> : null}
 
-      <ResultList result={filterResultByPrice("$")} title="Cost Effective" />
-      <ResultList result={filterResultByPrice("$$")} title="Bit Pricer" />
-      <ResultList result={filterResultByPrice("$$$")} title="Bit Spender" />
+        <ResultList result={filterResultByPrice("$")} title="Cost Effective" />
+        <ResultList result={filterResultByPrice("$$")} title="Bit Pricer" />
+        <ResultList result={filterResultByPrice("$$$")} title="Bit Spender" />
+      </View>
     </View>
   );
 };
