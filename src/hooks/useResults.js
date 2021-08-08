@@ -5,7 +5,7 @@ export default () => {
   const [result, setResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // console.log(result);
+  console.log(result);
 
   useEffect(() => {
     searchApi("pasta");
