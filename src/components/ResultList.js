@@ -19,7 +19,7 @@ const ResultList = ({ title, result, navigation }) => {
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={()=>navigation.navigate('Detail')}
+            onPress={() => navigation.navigate("Detail", { id: item.id })}
           >
             <ResultDetail result={item} />
           </TouchableOpacity>
