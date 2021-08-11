@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   image: {
     width: 250,
     borderRadius: 4,
-    height: 160,
+    height: 180,
     marginBottom: 5
   },
   name: {
