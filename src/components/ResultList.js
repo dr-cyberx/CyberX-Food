@@ -9,6 +9,10 @@ import {
 import ResultDetail from "./ResultDetail";
 
 const ResultList = ({ title, result, navigation }) => {
+
+  if (!result.length) return null;
+
+  
   return (
     <View style={ResultListStyle.container}>
       <Text style={ResultListStyle.titleStyle}>{title}</Text>
